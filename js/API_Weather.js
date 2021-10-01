@@ -6,7 +6,9 @@ const API_KEY = "4081444b7b90198136fefe6ed4ccf35b";
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 // Base source icon
 const API_URL_ICON = "http://openweathermap.org/img/wn/";
-
+//trouver new API : daily forecast data 
+const API_URL_DAY3 = "http://api.openweathermap.org/data/2.5/forecast/daily";
+//api.openweathermap.org/data/2.5/forecast/daily?q={city name}&cnt={cnt}&appid={API key}
 
 class API_WEATHER{
   constructor(city){
