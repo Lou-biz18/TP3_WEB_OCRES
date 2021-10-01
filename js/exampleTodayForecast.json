@@ -1,3 +1,4 @@
+/*type de données reçues par appli*/
 {
   "coord": { "lon": 2.35, "lat": 48.86 },
   "weather": [

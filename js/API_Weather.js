@@ -11,16 +11,16 @@ const API_URL_ICON = "http://openweathermap.org/img/wn/";
 class API_WEATHER{
   constructor(city){
     // Si la ville n'est pas définit alors la ville par défault est Paris
-    if(city === undefined){
+    if(city === null){
       city = "paris";
     }
     this.city = city;
   }
 
-  // Faire la requete à l'API openweathermap
+  // Faire la requete à l'API openweathermap pour aller chercher les données
   // Retourne une promise
   fetchTodayForecast(){
-    return axios
+    return axios//faire des get
     .get(`${API_URL}?q=${this.city}&units=metric&appid=${API_KEY}`, {
       crossdomain: true
     })
