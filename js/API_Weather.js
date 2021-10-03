@@ -21,9 +21,15 @@ class API_WEATHER{
 
   // Faire la requete à l'API openweathermap pour aller chercher les données
   // Retourne une promise
-  fetchTodayForecast(){
+  /*fetchTodayForecast(){
     return axios//faire des get
     .get(`${API_URL}?q=${this.city}&units=metric&appid=${API_KEY}`, {
+      crossdomain: true
+    })
+  }*/
+  fetchThreeDayForecast(){
+    return axios
+    .get(`${API_URL}?q=${this.city}&cnt=${cnt}&appid=${API_KEY}`, {
       crossdomain: true
     })
   }
