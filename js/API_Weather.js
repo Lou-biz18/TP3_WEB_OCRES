@@ -11,25 +11,27 @@ const API_URL_DAY3 = "http://api.openweathermap.org/data/2.5/forecast/daily";
 //api.openweathermap.org/data/2.5/forecast/daily?q={city name}&cnt={cnt}&appid={API key}
 
 class API_WEATHER{
-  constructor(city){
+  constructor(city,cnt){
     // Si la ville n'est pas définit alors la ville par défault est Paris
     if(city === null){
       city = "paris";
     }
     this.city = city;
+    cnt = 4;
   }
 
   // Faire la requete à l'API openweathermap pour aller chercher les données
   // Retourne une promise
-  /*fetchTodayForecast(){
+  //globalement pareil 
+  fetchTodayForecast(){
     return axios//faire des get
     .get(`${API_URL}?q=${this.city}&units=metric&appid=${API_KEY}`, {
       crossdomain: true
     })
-  }*/
+  }
   fetchThreeDayForecast(){
     return axios
-    .get(`${API_URL}?q=${this.city}&cnt=${cnt}&appid=${API_KEY}`, {
+    .get(`${API_URL_DAY3}?q=${this.city}&cnt=4&appid=${API_KEY}`, {
       crossdomain: true
     })
   }
